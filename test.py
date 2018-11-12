@@ -20,7 +20,7 @@ class TestDebouncer(unittest.TestCase):
     def pin_listener(self, pin_number, pin_level):
         if pin_number == 5 and pin_level == 1:
             self.is_led_on = True
-            # self.times_pressed = self.times_pressed + 1
+            self.times_pressed = self.times_pressed + 1
 
     def test_debouncer(self):
         self.v.UserButton.on()
